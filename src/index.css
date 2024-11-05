@@ -1,0 +1,50 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Vazirmatn', sans-serif;
+  cursor: none; /* پنهان کردن کرسر اصلی */
+}
+
+body {
+  direction: rtl;
+  background: url('/background.gif') center center/cover fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* کرسر سفارشی */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(234, 240, 212, 0.5);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.cursor-dot {
+  width: 4px;
+  height: 4px;
+  background-color: rgba(255, 143, 143, 0.8);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* گلو افکت پشت کرسر */
+.cursor-glow {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(43, 49, 235, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+}
